@@ -4,19 +4,11 @@ using UnityEngine.UI;
 namespace game {
     public class UIController : MonoBehaviour {
         public Text pointsText;
-        public Text warningText;
 
-        public PlanesController planesController;
-        public Score score;
+        public Points points;
 
         private void Update() {
-            if (planesController.planes.Count != 0) {
-                warningText.enabled = false;
-            } else {
-                warningText.enabled = true;
-            }
-
-            pointsText.text = score.points.ToString();
+            pointsText.text = points.points.ToString();
         }
     }
 }

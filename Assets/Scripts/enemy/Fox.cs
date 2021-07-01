@@ -1,9 +1,9 @@
 using UnityEngine;
 using game;
 
-namespace enemy {
-    public class Enemy : MonoBehaviour {
-        public Score score;
+namespace fox {
+    public class Fox : MonoBehaviour {
+        public Points points;
 
         private float destroyTime;
 
@@ -25,9 +25,9 @@ namespace enemy {
 
         private void OnDestroy() {
             if (Time.time > destroyTime) {
-                score.MinusPoints();
+                points.MinusPoints();
             } else {
-                score.PlusPoints();
+                points.PlusPoints();
             }
         }
     }

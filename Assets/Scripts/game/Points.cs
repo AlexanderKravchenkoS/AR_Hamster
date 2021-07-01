@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace game {
-    public class Score : MonoBehaviour {
+    public class Points : MonoBehaviour {
         public int points = 0;
 
         public void PlusPoints() {

@@ -1,5 +1,5 @@
 using UnityEngine;
-using enemy;
+using fox;
 
 namespace game {
     public class Hitter : MonoBehaviour {
@@ -12,13 +12,13 @@ namespace game {
                     return;
                 }
 
-                var enemy = hit.transform.gameObject.GetComponent<Enemy>();
+                var fox = hit.transform.gameObject.GetComponent<Fox>();
 
-                if (enemy == null) {
+                if (fox == null) {
                     return;
                 }
 
-                Destroy(enemy.gameObject);
+                Destroy(fox.gameObject);
             }
         }
     }
